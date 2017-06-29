@@ -1,0 +1,23 @@
+spring:
+  redis:
+    host: 192.168.68.166
+    port: 6379
+    password: mldnjava
+    timeout: 1000
+    database: 0
+    pool:
+      max-active: 10
+      max-idle: 8
+      min-idle: 2
+      max-wait: 100
+  redis-two:
+    host: 192.168.68.166
+    port: 6380
+    password: mldnjava
+    timeout: 1000
+    database: 0
+    pool:
+      max-active: 10
+      max-idle: 8
+      min-idle: 2
+      max-wait: 100

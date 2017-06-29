@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>SpringBoot模版渲染</title>
+	<script type="text/javascript" th:src="@{/js/main.js}"></script> 
+	<link rel="icon" type="image/x-icon" href="/images/mldn.ico"/>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+</head>
+<body>
+	<a href="aa.html" th:href="@{/show}">访问</a>
+	<hr/>
+	<p th:text="'官方网站：' + ${url}"/>
+	<p th:utext="'官方网站：' + ${url}"/>
+	<hr/>
+	<h2 th:text="#{welcome.url}"/>
+	<h2 th:text="#{welcome.msg('xiaoli')}"/>
+	<hr/>
+	<p th:utext="'官方网站：' + ${url} + '、数学计算：' + (1 + 2)"/>
+</body>
+</html>

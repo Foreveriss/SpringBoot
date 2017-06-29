@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>SpringBoot模版渲染</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+</head>
+<body>
+	<form th:action="@{/member_add}" method="post">
+		用户编号：<input type="text" name="mid" value="101"/><br/>
+		用户姓名：<input type="text" name="name" value="SMITH"/><br/>
+		<input type="submit" value="表单提交"/>
+	</form>
+</body> 
+</html>

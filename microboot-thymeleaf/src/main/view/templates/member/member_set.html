@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>SpringBoot模版渲染</title>
+	<script type="text/javascript" th:src="@{/js/main.js}"></script> 
+	<link rel="icon" type="image/x-icon" href="/images/mldn.ico"/>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+</head>
+<body>
+	<p th:text="${#dates.format(mydate,'yyyy-MM-dd')}"/>
+	<p th:text="${#dates.format(mydate,'yyyy-MM-dd HH:mm:ss.SSS')}"/>
+	<hr/>
+	<p th:text="${#strings.replace('www.mldn.cn','.','$')}"/>
+	<p th:text="${#strings.toUpperCase('www.mldn.cn')}"/>
+	<p th:text="${#strings.trim('www.mldn.cn')}"/>
+	<hr/>
+	<p th:text="${#sets.contains(names,'mldn-0')}"/>
+	<p th:text="${#sets.contains(names,'mldn-9')}"/>
+	<p th:text="${#sets.size(names)}"/>
+	<hr/>
+	<p th:text="${#sets.contains(ids,0)}"/>
+	<p th:text="${ids[1]}"/>
+	<p th:text="${names[1]}"/>
+</body>
+</html>

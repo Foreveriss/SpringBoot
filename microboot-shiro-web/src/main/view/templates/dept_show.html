@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+	<title>SpringBoot模版渲染</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+</head>
+<body>
+	<h1>显示部门信息的内容</h1>
+	<h2>欢迎：<shiro:principal/></h2>
+	<p><a shiro:hasRole="emp">雇员管理</a></p>
+	<p><a shiro:hasRole="dept">部门管理</a></p>
+	<p><a shiro:hasPermission="emp:add">雇员增加</a></p>
+	<p><a shiro:hasPermission="dept:edit">部门修改</a></p>
+	<p shiro:notAuthenticated="">您还未登录，请先登录!</p> 
+	<p shiro:authenticated="">欢迎光临!</p> 
+</body>
+</html>

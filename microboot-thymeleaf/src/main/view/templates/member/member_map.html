@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>SpringBoot模版渲染</title>
+	<script type="text/javascript" th:src="@{/js/main.js}"></script> 
+	<link rel="icon" type="image/x-icon" href="/images/mldn.ico"/>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+</head>
+<body>
+	<p th:text="${#maps.containsKey(allMembers,'mldn-7')}"/>
+	<p th:text="${allMembers['mldn-7'].name}"/>
+	<hr/>
+	<table>
+		<tr><td>No.</td><td>KEY</td><td>MID</td><td>姓名</td><td>年龄</td><td>偶数</td><td>奇数</td></tr>
+		<tr th:each="memberEntry,memberStat:${allMembers}">
+			<td th:text="${memberStat.index + 1}"/>
+			<td th:text="${memberEntry.key}"/>
+			<td th:text="${memberEntry.value.mid}"/>
+			<td th:text="${memberEntry.value.name}"/>
+			<td th:text="${memberEntry.value.age}"/>
+			<td th:text="${memberStat.even}"/>
+			<td th:text="${memberStat.odd}"/>
+		</tr>
+	</table>
+</body>
+</html>

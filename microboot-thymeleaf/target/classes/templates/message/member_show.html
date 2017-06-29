@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>SpringBoot模版渲染</title>
+	<script type="text/javascript" th:src="@{/js/main.js}"></script> 
+	<link rel="icon" type="image/x-icon" href="/images/mldn.ico"/>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+</head>
+<body>
+	<span th:unless="${member.age gt 18}">
+		你还不满18岁，不能够看电影！
+	</span> 
+	<hr/>
+	<span th:switch="${member.mid}">
+		<p th:case="100">mid为101的员工来了</p>
+		<p th:case="99">mid为102的员工来了</p>
+		<p th:case="*">没有匹配成功的数据！</p>
+	</span> 
+</body> 
+</html>

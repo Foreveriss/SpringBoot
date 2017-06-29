@@ -1,0 +1,17 @@
+server:
+  port: 80
+spring:
+  messages:
+    basename: i18n/Messages,i18n/Pages
+  kafka:
+    bootstrap-servers:
+    - kafka-single:9095
+    template:
+      default-topic: mldn-microboot
+    consumer:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      group-id: group-1
+    properties:
+      sasl.mechanism: PLAIN
+      security.protocol: SASL_PLAINTEXT

@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>SpringBoot模版渲染</title>
+	<script type="text/javascript" th:src="@{/js/main.js}"></script> 
+	<link rel="icon" type="image/x-icon" href="/images/mldn.ico"/>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+</head>
+<body>
+	<form th:action="@{/upload}" method="post" enctype="multipart/form-data">
+		姓名：<input type="text" name="name"/><br/>
+		照片：<input type="file" name="photo"/><br/>
+		照片：<input type="file" name="photo"/><br/>
+		照片：<input type="file" name="photo"/><br/>
+		<input type="submit" value="上传"/>
+	</form>
+	<a th:href="@{/show(groupId='group1',fileId='M00/00/00/wKhEtVlTFc2ANT4kAALWT3AMif079.jpeg')}">查看照片</a>
+	<a th:href="@{/show(groupId='group1',fileId='M00/00/00/wKhEtVlTFc2AUVINAAA9nfksZs0713.png')}">查看照片</a>
+	<a th:href="@{/show(groupId='group1',fileId='M00/00/00/wKhEtVlTFc2AOgxGAC-AAARLh5I67.jpeg')}">查看照片</a>
+</body> 
+</html>

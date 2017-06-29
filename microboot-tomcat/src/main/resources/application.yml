@@ -1,0 +1,7 @@
+server:
+  port: 443                           # https的端口设置为443
+  ssl:
+    key-store: classpath:keystore.p12 # keystore配置文件路径
+    key-store-type: PKCS12            # keystore类型
+    key-alias: mytomcat               # 设置的别名
+    key-password: mldnjava            # 访问密码

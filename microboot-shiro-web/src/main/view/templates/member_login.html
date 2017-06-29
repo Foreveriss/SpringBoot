@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>SpringBoot模版渲染</title>
+	<script type="text/javascript" th:src="@{/js/main.js}"></script> 
+	<link rel="icon" type="image/x-icon" href="/images/mldn.ico"/>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+</head>
+<body>
+	<h1>用户登录表单、<span th:text="${error}"/></h1>
+	<form th:action="@{/loginPage}" method="post">
+		登录名：<input type="text" name="mid" value="mldnjava"/><br/>
+		密&nbsp;码：<input type="text" name="password" value="hello"/><br/>
+		<input type="submit" value="登录"/>
+	</form>
+</body> 
+</html>

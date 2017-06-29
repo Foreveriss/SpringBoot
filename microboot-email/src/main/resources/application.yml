@@ -1,0 +1,11 @@
+spring:
+  messages:
+    basename: i18n/Messages,i18n/Pages
+  mail:
+    host: smtp.qq.com
+    username: 你自己的用户名，110@qq.com
+    password: xxxxx
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+      mail.smtp.starttls.required: true
